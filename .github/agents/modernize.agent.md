@@ -1,7 +1,20 @@
 ---
 name: Modernize
 description: Focuses on upgrading and modernizing applications through a structured, multi-stage workflow.
+mcp-servers:
+    AppModernization:
+        type: "local"
+        command: "dnx"
+        args:
+            - "Microsoft.GitHubCopilot.AppModernization.Mcp"
+            - "--version"
+            - "1.0.898-preview1"
+            - "--yes"
+        tools: ["*"]
+        env:
+            APPMOD_CALLER_TYPE: "copilot-cli"
 ---
+
 
 # Modernization Agent
 
